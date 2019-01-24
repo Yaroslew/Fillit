@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 08:22:47 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/01/24 16:34:19 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/01/24 18:22:04 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 
 int 		main_check(int argc, char **argv);
 void		message_error(int a);
-char		**square(int count);
-char		***create_array_figurs(char **argv, int count);
+int			root(int count);
+
 
 
 

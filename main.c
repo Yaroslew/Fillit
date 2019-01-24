@@ -6,8 +6,14 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:13:36 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/01/24 18:13:36 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/01/24 18:22:04 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	main(int argc, char **argv)
+{
+	int count_figurs;
 
+	count_figurs = main_check(int argc, char **argv);
+
+}
