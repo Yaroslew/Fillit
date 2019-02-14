@@ -94,9 +94,8 @@ int			main_check(int argc, char **argv)
 	if (argc != 2)
 		message_error(0, 'N');
 	fd = open(argv[1], O_RDONLY);
-	if (!(temp = ft_memalloc(21)))
+	if (!(temp = ft_strnew(21)))
 		return (-1);
-	ft_bzero(temp, 21);
 	count = reader(fd, temp);
 	free(temp);
 	close(fd);

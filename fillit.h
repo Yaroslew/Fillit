@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 08:22:47 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/01/25 07:34:54 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/14 07:10:56 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,18 @@
 
 #include <stdio.h> // Забудешь удалить, убью!
 
-
+typedef struct	s_coordinates
+{
+	unsigned short x[4];
+	unsigned short y[4];
+	struct s_coordinates	*next;
+} t_crd;
 
 
 int 		main_check(int argc, char **argv);
 void		message_error(int a, char c); // удали символ ошибки!
-int			root(int count);
+int			root_area(int count);
+void		read_figurs(char **argv);
 
 
 

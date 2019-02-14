@@ -12,10 +12,13 @@
 
 #include "fillit.h"
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	int count_figurs;
+	int	count_figurs;
+	int	root;
 
 	count_figurs = main_check(argc, argv);
+	root = root_area(count_figurs);
+
 
 }
