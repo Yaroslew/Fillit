@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:13:36 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/01/25 07:14:38 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/15 08:06:37 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int		main(int argc, char **argv)
 
 	count_figurs = main_check(argc, argv);
 	root = root_area(count_figurs);
-
+	read_figurs(argv);
 
 }
