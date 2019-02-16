@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free_lst.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/24 18:13:36 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 14:23:56 by pcorlys-         ###   ########.fr       */
+/*   Created: 2019/02/16 14:10:32 by pcorlys-          #+#    #+#             */
+/*   Updated: 2019/02/16 15:05:20 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		main(int argc, char **argv)
+void	free_lst(t_crd **lst)
 {
-	int	count_figurs;
-	int	root;
-	t_crd	*head;
 	t_crd	*copy;
+	t_crd	*head;
 
-	count_figurs = main_check(argc, argv);
-	root = root_area(count_figurs);
-	head = read_figurs(argv);
-	copy = head;
-//	head = name_your_function(head, copy, root);
-	while (head == NULL)
+	head = *lst;
+	while (head)
 	{
-		root++;
-//		head = name_your_function(head, copy, root);
+		copy = head->next;
+		if (copy != NULL)
+			free(head->next);
+		head->next = NULL;
+		free(head);
+		head = copy;
 	}
-	create_area(head, root);
-	free_lst(&head);
-	free_lst(&copy);
-
 }

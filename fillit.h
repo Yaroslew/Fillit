@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 08:22:47 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/15 07:43:54 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:22:22 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ int 		main_check(int argc, char **argv);
 void		message_error(int a, char c); // удали символ ошибки!
 int			root_area(int count);
 t_crd		*read_figurs(char **argv);
+char		**create_area(t_crd *head, int root);
+void		free_lst(t_crd **lst);
+
 
 
 

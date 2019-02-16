@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:02:54 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 11:44:18 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:28:43 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,15 +95,17 @@ static t_crd	*create_lst(t_crd *head, char *temp)
 	if (head == NULL)
 	{
 		head = malloc(sizeof(t_crd));
+		head->next = NULL;
 		record(head, temp);
 		return (head);
 	}
-
 	copy = head;
 	while (copy->next != NULL)
 		copy = copy->next;
 	copy->next = malloc(sizeof(t_crd));
-	record(copy->next, temp);
+	copy = copy->next;
+	copy->next = NULL;
+	record(copy, temp);
 
 	return (head);
 }
