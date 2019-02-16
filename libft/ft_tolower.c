@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_area.c                                      :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pcorlys- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 12:15:39 by pcorlys-         ###   ########.fr       */
+/*   Created: 2018/12/16 18:37:54 by pcorlys-          #+#    #+#             */
+/*   Updated: 2018/12/16 18:39:17 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char 	**create_area(t_crd *head, int root)
+int	ft_tolower(int c)
 {
-	char 	**res;
-
-
+	return ((c >= 'A' && c <= 'Z')) ? c + 32 : c;
 }

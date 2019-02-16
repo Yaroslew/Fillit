@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_area.c                                      :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pcorlys- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 12:15:39 by pcorlys-         ###   ########.fr       */
+/*   Created: 2018/12/16 18:27:29 by pcorlys-          #+#    #+#             */
+/*   Updated: 2018/12/16 18:28:46 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char 	**create_area(t_crd *head, int root)
+int	ft_isascii(int c)
 {
-	char 	**res;
-
-
+	return (c >= 0 && c <= 0x7F);
 }

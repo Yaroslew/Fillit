@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_area.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pcorlys- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 12:15:39 by pcorlys-         ###   ########.fr       */
+/*   Created: 2018/12/24 07:16:27 by pcorlys-          #+#    #+#             */
+/*   Updated: 2018/12/30 08:57:48 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char 	**create_area(t_crd *head, int root)
+void	ft_putstr(char const *s)
 {
-	char 	**res;
+	int	q;
 
-
+	if (!s)
+		return ;
+	q = 0;
+	while (s[q])
+	{
+		ft_putchar(s[q]);
+		q++;
+	}
 }

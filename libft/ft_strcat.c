@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_area.c                                      :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pcorlys- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 12:15:39 by pcorlys-         ###   ########.fr       */
+/*   Created: 2018/12/12 07:27:28 by pcorlys-          #+#    #+#             */
+/*   Updated: 2018/12/30 12:43:28 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char 	**create_area(t_crd *head, int root)
+char	*ft_strcat(char *first, const char *second)
 {
-	char 	**res;
+	int	q;
+	int	r;
 
-
+	q = 0;
+	r = 0;
+	while (first[q] != '\0')
+		q++;
+	while (second[r])
+	{
+		first[q] = second[r];
+		q++;
+		r++;
+	}
+	first[q] = '\0';
+	return (first);
 }

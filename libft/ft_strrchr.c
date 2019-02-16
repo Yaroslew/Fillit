@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_area.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pcorlys- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 12:15:39 by pcorlys-         ###   ########.fr       */
+/*   Created: 2018/12/14 05:09:13 by pcorlys-          #+#    #+#             */
+/*   Updated: 2018/12/30 12:44:24 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char 	**create_area(t_crd *head, int root)
+char		*ft_strrchr(const char *second, int c)
 {
-	char 	**res;
+	int		q;
+	char	*sec;
 
-
+	q = 0;
+	sec = (char*)second;
+	while (sec[q])
+		q++;
+	while (q >= 0)
+	{
+		if (sec[q] == (char)c)
+			return (&sec[q]);
+		q--;
+	}
+	return (0);
 }

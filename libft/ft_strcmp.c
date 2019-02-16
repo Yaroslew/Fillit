@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_area.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pcorlys- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 12:15:39 by pcorlys-         ###   ########.fr       */
+/*   Created: 2018/12/15 21:48:05 by pcorlys-          #+#    #+#             */
+/*   Updated: 2018/12/30 12:44:52 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char 	**create_area(t_crd *head, int root)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	char 	**res;
+	int	q;
 
-
+	q = 0;
+	while (s1[q] == s2[q] && (s1[q] != '\0' && s2[q] != '\0'))
+		q++;
+	return ((unsigned char)s1[q] - (unsigned char)s2[q]);
 }
