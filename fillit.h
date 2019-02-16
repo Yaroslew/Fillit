@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 08:22:47 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 15:12:09 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/16 15:12:12 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include "libft/libft.h"
-
-
-#include <stdio.h> // Забудешь удалить, убью!
 
 typedef struct	s_coordinates
 {

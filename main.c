@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:13:36 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 15:45:28 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/16 15:46:40 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		main(int argc, char **argv)
 	count_figurs = main_check(argc, argv);
 	root = root_area(count_figurs);
 	head = read_figurs(argv);
-	copy = copy_lst(head);
+//	copy = copy_lst(head);
 //	head = name_your_function(head, copy, root);
 	while (head == NULL)
 	{
