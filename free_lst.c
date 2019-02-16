@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 14:10:32 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 15:05:20 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/16 15:38:29 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	free_lst(t_crd **lst)
 	while (head)
 	{
 		copy = head->next;
-		if (copy != NULL)
-			free(head->next);
 		head->next = NULL;
 		free(head);
 		head = copy;

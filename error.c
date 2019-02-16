@@ -12,18 +12,17 @@
 
 #include "fillit.h"
 
-static void	it_just_error(char c)
+static void	it_just_error()
 {
-	ft_putstr("error ");
-	ft_putchar(c);
+	ft_putstr("error");
 	ft_putchar('\n');
 	exit(0);
 }
 
-void		message_error(int a, char c)
+void		message_error(int a)
 {
 	if (a == 1)
-		it_just_error(c);
+		it_just_error();
 	ft_putstr("usage: fillit target \n");
 	exit(0);
 }

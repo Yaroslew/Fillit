@@ -21,19 +21,19 @@ static void	paragraphs(char *temp, int buff)
 	count = 0;
 	if (temp[4] != '\n' || temp[9] != '\n' || temp[14] != '\n'
 		|| temp[19] != '\n')
-		message_error(1, 'N');
+		message_error(1);
 	if (buff == 21 && temp[20] != '\n')
-		message_error(1, 'N');
+		message_error(1);
 	while (temp[q])
 	{
 		if (temp[q] != '.' && temp[q] != '#' && temp[q] != '\n')
-			message_error(1, 'N');
+			message_error(1);
 		if (temp[q] == '\n')
 			count++;
 		q++;
 	}
 	if (count != 4 && count != 5)
-		message_error(1, 'N');
+		message_error(1);
 }
 
 static void	tetraminos(char *temp)
@@ -50,12 +50,12 @@ static void	tetraminos(char *temp)
 			count++;
 			if (temp[q + 5] != '#' && temp[q + 1] != '#'
 				&& temp[q - 5] != '#' && temp[q - 1] != '#')
-				message_error(1, 'N');
+				message_error(1);
 		}
 		q++;
 	}
 	if (count != 4)
-		message_error(1, 'N');
+		message_error(1);
 }
 
 static int	reader(int fd, char *temp)
@@ -72,16 +72,16 @@ static int	reader(int fd, char *temp)
 		if ((buff = read(fd, temp, 21)) > 0)
 			count++;
 		else if (buff < 0)
-			message_error(1, 'N');
+			message_error(1);
 		else if (buff == 0)
 			return (count);
 		paragraphs(temp, buff);
 		tetraminos(temp);
 	}
 	if (check != 20 || check == 1)
-		message_error(1, 'N');
+		message_error(1);
 	if (count > 26)
-		message_error(1, 'N');
+		message_error(1);
 	return (count);
 }
 
@@ -92,7 +92,7 @@ int			main_check(int argc, char **argv)
 	int		count;
 
 	if (argc != 2)
-		message_error(0, 'N');
+		message_error(0);
 	fd = open(argv[1], O_RDONLY);
 	if (!(temp = ft_strnew(21)))
 		return (-1);
