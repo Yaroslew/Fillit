@@ -42,7 +42,7 @@ static void 	writing(char **res)
 	}
 }
 
-char			**create_area(t_crd *head, int root)
+void			create_area(t_crd *head, int root)
 {
 	char		**res;
 	int			q;

@@ -27,7 +27,7 @@ static void		sort_tetraminos_ver(char **temp)
 			if (raz[q] == '#')
 			{
 				raz[q] = '.';
-				raz[q - 4] = '#';
+				raz[q - 5] = '#';
 				flag++;
 			}
 			q++;

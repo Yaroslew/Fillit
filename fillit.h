@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 08:22:47 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 15:12:12 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/18 15:39:34 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ typedef struct	s_coordinates
 
 int 		main_check(int argc, char **argv);
 void		message_error(int a);
-int			root_area(int count);
+int			root_area(int count, t_crd *head);
 t_crd		*read_figurs(char **argv);
-char		**create_area(t_crd *head, int root);
+void		create_area(t_crd *head, int root);
 void		free_lst(t_crd **lst);
 
 

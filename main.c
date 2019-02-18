@@ -20,8 +20,8 @@ int		main(int argc, char **argv)
 	t_crd	*copy;
 
 	count_figurs = main_check(argc, argv);
-	root = root_area(count_figurs);
 	head = read_figurs(argv);
+	root = root_area(count_figurs, head);
 //	copy = copy_lst(head);
 //	head = name_your_function(head, copy, root);
 	while (head == NULL)
