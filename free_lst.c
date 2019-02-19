@@ -26,3 +26,4 @@ void	free_lst(t_crd **lst)
 		head = copy;
 	}
 }
+//
