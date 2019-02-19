@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:13:36 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/19 18:33:14 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/19 18:33:37 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		main(int argc, char **argv)
 	while (copy == NULL)
 	{
 		root++;
-		head = fill_it(head, copy, (unsigned short)root - 1);
+		copy = fill_it(head, copy, (unsigned short)root - 1);
 	}
 	create_area(head, root);
 	free_lst(&head);
