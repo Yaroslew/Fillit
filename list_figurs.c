@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:02:54 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 14:28:43 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/19 20:12:33 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static void		sort_tetraminos_ver(char **temp)
 {
-	int 		q;
-	int 		flag;
-	char 		*raz;
+	int			q;
+	int			flag;
+	char		*raz;
 
 	q = 0;
 	flag = 0;
@@ -38,9 +38,9 @@ static void		sort_tetraminos_ver(char **temp)
 
 static void		sort_tetraminos_hor(char **temp)
 {
-	int 		q;
-	int 		flag;
-	char 		*raz;
+	int			q;
+	int			flag;
+	char		*raz;
 
 	q = 0;
 	flag = 0;
@@ -59,12 +59,13 @@ static void		sort_tetraminos_hor(char **temp)
 	if (flag)
 		sort_tetraminos_hor(temp);
 }
-static void	record(t_crd *node, char *temp)
+
+static void		record(t_crd *node, char *temp)
 {
-	int 	q;
-	int 	r;
-	int 	t;
-	int		z;
+	int			q;
+	int			r;
+	int			t;
+	int			z;
 
 	q = 0;
 	r = 0;
@@ -106,15 +107,14 @@ static t_crd	*create_lst(t_crd *head, char *temp)
 	copy = copy->next;
 	copy->next = NULL;
 	record(copy, temp);
-
 	return (head);
 }
 
-t_crd 		*read_figurs(char **argv)
+t_crd			*read_figurs(char **argv)
 {
-	int		fd;
-	char 	*temp;
-	t_crd 	*head;
+	int			fd;
+	char		*temp;
+	t_crd		*head;
 
 	head = NULL;
 	temp = ft_strnew(21);

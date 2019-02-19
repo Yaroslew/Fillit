@@ -6,15 +6,15 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 12:01:11 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/16 14:03:54 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/19 19:24:46 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static char 	**reading_lst(t_crd *head, char **res)
+static char		**reading_lst(t_crd *head, char **res)
 {
-	char 		ch;
+	char		ch;
 
 	ch = 'A';
 	while (head)
@@ -29,7 +29,7 @@ static char 	**reading_lst(t_crd *head, char **res)
 	return (res);
 }
 
-static void 	writing(char **res)
+static void		writing(char **res)
 {
 	int			q;
 

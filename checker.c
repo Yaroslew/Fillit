@@ -6,7 +6,7 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 07:08:42 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/01/25 07:43:22 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/19 20:44:10 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,28 @@ static void	tetraminos(char *temp)
 {
 	int		q;
 	int		count;
+	int		connect;
 
 	q = 0;
 	count = 0;
+	connect = 0;
 	while (temp[q])
 	{
 		if (temp[q] == '#')
 		{
 			count++;
-			if (temp[q + 5] != '#' && temp[q + 1] != '#'
-				&& temp[q - 5] != '#' && temp[q - 1] != '#')
-				message_error(1);
+			if (temp[q - 5] == '#')
+				connect++;
+			if (temp[q + 5] == '#')
+				connect++;
+			if (temp[q + 1] == '#')
+				connect++;
+			if (temp[q - 1] == '#')
+				connect++;
 		}
 		q++;
 	}
-	if (count != 4)
+	if (connect < 6 || connect > 8 || count != 4)
 		message_error(1);
 }
 

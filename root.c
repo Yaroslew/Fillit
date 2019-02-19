@@ -6,23 +6,25 @@
 /*   By: pcorlys- <pcorlys-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/23 07:23:49 by pcorlys-          #+#    #+#             */
-/*   Updated: 2019/02/18 16:06:41 by pcorlys-         ###   ########.fr       */
+/*   Updated: 2019/02/19 20:06:38 by pcorlys-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static int check_lst(t_crd *head)
+static int	check_lst(t_crd *head)
 {
-	int 	flag;
+	int		flag;
 
 	flag = 0;
 	while (head)
 	{
-		if ((head->y[1] == head->y[2] && (head->y[1] == head->y[0] || head->y[1] == head->y[3])
-		|| (head->x[1] == head->x[2] && (head->x[1] == head->x[0] || head->x[1] == head->x[3]))))
+		if ((head->y[1] == head->y[2] && (head->y[1] == head->y[0]
+		|| head->y[1] == head->y[3]))
+		|| (head->x[1] == head->x[2] && (head->x[1] == head->x[0]
+		|| head->x[1] == head->x[3])))
 			flag = 2;
-		if ((head->y[0] == head->y[1] &&  head->y[1] == head->y[2]
+		if ((head->y[0] == head->y[1] && head->y[1] == head->y[2]
 		&& head->y[2] == head->y[3]) || (head->x[0] == head->x[1]
 		&& head->x[1] == head->x[2] && head->x[2] == head->x[3]))
 			flag = 1;
@@ -31,7 +33,7 @@ static int check_lst(t_crd *head)
 	return (flag);
 }
 
-int		root_area(int count, t_crd *head)
+int			root_area(int count, t_crd *head)
 {
 	int		sum;
 	int		root;
