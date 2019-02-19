@@ -31,6 +31,7 @@ int			root_area(int count, t_crd *head);
 t_crd		*read_figurs(char **argv);
 void		create_area(t_crd *head, int root);
 void		free_lst(t_crd **lst);
+t_crd		*fill_it(t_crd *base, t_crd *ss, unsigned short border);
 
 
 
