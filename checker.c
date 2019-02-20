@@ -80,8 +80,8 @@ static int	reader(int fd, char *temp)
 			count++;
 		else if (buff < 0)
 			message_error(1);
-		else if (buff == 0)
-			return (count);
+//		else if (buff == 0)
+//			return (count);
 		paragraphs(temp, buff);
 		tetraminos(temp);
 	}
